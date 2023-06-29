@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            font-size: 35px;
+            color: rgb(0, 0, 0);
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            background: rgba(210, 126, 248, 0.897);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            width: 150px;
+        }
+
+        button {
+            height: 50px;
+            width: 100px;
+            background: white;
+            color: blue;
+            font-weight: 600;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+    <title>Pedido Irrecusável</title>
+</head>
+<body>
+    <div class="box">
+        <p>Manda ft do peito? kkkk</p>
+        <div class="buttons-container">
+            <button><a href="https://wa.me/qr/JE2Z5UB6WP2OP1">Sim</a></button>
+            <button id="no">Não</button>
+        </div>
+    </div>
+</body>
+<script>
+    let button = document.getElementById('no');
+    let height = window.innerHeight - 50;
+    let width = window.innerWidth - 50;
+
+    button.addEventListener('mouseover', function () {
+        button.style.position = "absolute"
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+    })
+</script>
+</html>
